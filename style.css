@@ -29,6 +29,10 @@ p{
 /* header section style start */
 header{
     background-color: #fef5ef;
+    position: fixed;
+    width: 100%;
+    margin: auto;
+    z-index: 999;
 }
 .header-container{
     width: 90%;
@@ -272,7 +276,7 @@ ul .sub-menu > li > a:hover{
     grid-template-columns: auto auto;
     gap: 20px;
 }
-.banner-img-box-1-item::after, .banner-img-box-2-item::after, .banner-two-box::after, .banner-3-img::after{
+.banner-img-box-1-item::after, .banner-img-box-2-item::after, .banner-two-box::after, .banner-3-img::after, .insta-box::after{
     content: "";
     position: absolute;
     top: 50%;
@@ -283,12 +287,12 @@ ul .sub-menu > li > a:hover{
     opacity: 1;
     background-color: rgba(255, 255, 255, 0.6);
 }
-.banner-img-box-1-item:hover::after, .banner-img-box-2-item:hover::after, .banner-two-box:hover::after, .banner-3-img:hover::after{
+.banner-img-box-1-item:hover::after, .banner-img-box-2-item:hover::after, .banner-two-box:hover::after, .banner-3-img:hover::after, .insta-box:hover::after{
     height: 100%;
     opacity: 0;
     transition: 1.5s;
 }
-.banner-img-box-1-item::before, .banner-img-box-2-item::before, .banner-two-box::before, .banner-3-img::before{
+.banner-img-box-1-item::before, .banner-img-box-2-item::before, .banner-two-box::before, .banner-3-img::before, .insta-box::before{
     content: "";
     position: absolute;
     top: 50%;
@@ -299,7 +303,7 @@ ul .sub-menu > li > a:hover{
     opacity: 1;
     background-color: rgba(255, 255, 255, 0.6);
 }
-.banner-img-box-1-item:hover::before, .banner-img-box-2-item:hover::before, .banner-two-box:hover::before, .banner-3-img:hover::before{
+.banner-img-box-1-item:hover::before, .banner-img-box-2-item:hover::before, .banner-two-box:hover::before, .banner-3-img:hover::before, .insta-box:hover::before{
     width: 100%;
     opacity: 0;
     transition:  1.5s;
@@ -483,7 +487,6 @@ ul .sub-menu > li > a:hover{
 /* banner three section style start */
 .banner-section-three{
     margin-top: 100px;
-    margin-bottom: 100px;
 }
 .banner-section-three-wrapper{
     display: flex;
@@ -538,5 +541,237 @@ ul .sub-menu > li > a:hover{
 .banner-3-icon i{
     font-size: 20px;
 }
-
 /* banner three section style end */
+
+/* blog section style start */
+.blog-section{
+    margin-top: 100px;
+}
+.blog-header{
+    margin-bottom: 40px;
+}
+.blog-header h2{
+    font-size: 2.6rem;
+    margin: 0px 0px 7px;
+}
+.blog-header p{
+    font-size: 1.4rem;
+    color: #777;
+}
+
+.blog-wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+.blog-box{
+    flex-basis: 32%;
+    overflow: hidden;
+}
+.blog-img{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin: 15px 0px;
+}
+.blog-box img{
+    display: block;
+    width: 100%;
+    transition: 1s;
+    overflow: hidden;
+}
+.blog-img img:hover{
+    transform: scale(1.1);
+}
+.blog-content h3{
+    font-size: 2.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.blog-content h3:hover{
+    color: #b19361;
+}
+.blog-content p{
+    color: #777;
+    line-height: 25px;
+    margin-bottom: 25px;
+}
+.blog-link{
+    display: flex;
+    justify-content: space-between;
+}
+.blog-link span{
+    font-size: 1.4rem;
+    color: #777;
+}
+/* blog section style end */
+
+/* insta section style start */
+.insta-section{
+    padding: 100px 0px;
+    background-color: #f6f6f6;
+}
+.insta-wrapper{
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.insta-box{
+    flex-basis: 20%;
+    position: relative;
+}
+.insta-img img{
+    display: block;
+    width: 100%;
+}
+.insta-btn{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.insta-btn a{
+    font-size: 1.8rem;
+    font-weight: 600;
+    padding: 10px 25px;
+    background-color: #fff;
+    border-radius: 5px;
+    transition: 0.5s;
+    color: #b19361;
+}
+.insta-btn a:hover{
+    background-color: #b19361;
+    color: #fff;    
+}
+/* insta section style start */
+
+/* footer section style start */
+footer{
+    background-color: #24262b;
+}
+.f-t-wrapper{
+    display: flex;
+    justify-content: space-around;
+    padding: 80px 0px 40px;
+}
+.f-t-box{
+flex-basis: 25%;
+}
+.f-t-box h3{
+color: #fff;
+font-size: 1.8rem;
+position: relative;
+margin-bottom: 20px;
+}
+.f-t-box h3::after{
+content: "";
+width: 50px;
+height: 2px;
+background-color: #b19361;
+position: absolute;
+left: 0;
+bottom: -20px;
+}
+.f-t-list{
+margin-top: 40px;
+list-style-type: none;
+}
+.f-t-list li{
+padding: 5px 0px;
+transition: 1s;
+}
+.f-t-list li a{color: #777;font-size: 1.6rem;transition: 1s;}
+.f-t-list li:hover{
+transform: translateX(10px);
+}
+.f-t-list li:hover a{
+color: #fff;
+}
+.f-t-list > p {
+    color: #777;
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+}
+.footer-center{padding: 50px 0px;border-top: 1px solid rgba(255,255,255,0.07);border-bottom: 1px solid rgba(255,255,255,0.07);}
+.f-c-wrapper{
+display: flex;
+}
+.f-c-follow{
+flex-basis: 25%;
+}
+.f-c-follow h2, .f-c-subscribe h2{
+font-size: 1.8rem;
+color: #fff;
+padding-bottom: 40px;
+}
+.f-c-icon{
+width: 100%;
+margin-top: 4%;
+}
+.f-c-icon li{
+float: left;
+}
+.f-c-icon i{
+font-size: 1.8rem;
+color: #fff;
+padding: 10px;
+background-color: #3c3f48;
+border-radius: 50%;
+margin: 0px 10px;
+transition: 0.5s;
+}
+.f-c-icon i:hover{
+    background-color: #fff;
+    color: #000;
+}
+.f-c-icon i:first-child{
+margin-left: 0px;
+}
+.f-c-subscribe{
+flex-basis: 75%;
+}
+.mail-address{
+width: 500px;
+padding: 10px 20px;
+border-radius: 3px;
+background-color: #24262b;
+outline: none;
+border: 1px solid #9b9b97;
+}
+.submit{
+width: 130px;
+padding: 9px 0px;
+border-radius: 3px;
+background-color: #b19361;
+outline: none;
+border: 1px solid #b19361;
+font-size: 1.6rem;
+font-weight: 600;
+color: #fff;
+position: absolute;
+left: 490px;
+top: 0px;
+}
+.f-c-ibox{
+position: relative;
+}
+
+.footer-bottom{
+    padding: 30px 0px;
+}
+.f-b-wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+.copyright{
+    color: #777;
+    font-size: 1.4rem;
+}
+.copyright > a{
+    color: #fff;
+}
+.copyright > i{
+    color: red;
+}
+
+/* footer section style end */
